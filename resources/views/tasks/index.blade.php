@@ -11,7 +11,7 @@
 <div>
     @foreach ($tasks as $task)
         <li>
-            <a href="/tasks/{{$task->id}}}" >{{$task->body}}</a>
+            <a href="/tasks/{{$task->id}}" >{{$task->body}}</a>
         </li>
     @endforeach
 </div>
