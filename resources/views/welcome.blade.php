@@ -79,7 +79,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravelas <?php echo $name.' '.$age.'-'.$age2?>
+                </div>
+                <div>
+                    @foreach ($tasks as $task)
+                        <li>{{$task->body}}</li>
+                    @endforeach
                 </div>
 
                 <div class="links">

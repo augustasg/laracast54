@@ -11,6 +11,36 @@
 |
 */
 
+use Illuminate\Support\Facades\DB;
+
 Route::get('/', function () {
-    return view('welcome');
+    $name = 'vardas';
+    $age = 31;
+    //$tasks = ['t1', 't2', 't3'];
+
+    $tasks = DB::table('tasks')->get();
+    return view('welcome',
+        compact('name', 'age', 'tasks')
+    )->with('age2', '13');
+});
+
+
+
+Route::get('/tasks', function () {
+
+
+    $tasks = DB::table('tasks')->get();
+
+    return view('tasks.index', compact('tasks'));
+});
+
+
+
+Route::get('/tasks/{id}', function ($id) {
+
+
+    $task = DB::table('tasks')->find($id);
+
+
+    return view('tasks.show', compact('task'));
 });
