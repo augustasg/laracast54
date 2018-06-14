@@ -10,4 +10,5 @@ class Task extends Model
     {
         return $query->where('complete', 0);
     }
+
 }
