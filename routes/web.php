@@ -31,3 +31,9 @@ Route::get('/tasks', 'TasksController@index');
 
 
 Route::get('/tasks/{task}','TasksController@show');
+
+Route::get('/posts', 'PostsController@index');
+
+// controller => PostsController
+// Eloquent model => Post
+// migration=> create_post_table
