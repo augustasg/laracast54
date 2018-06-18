@@ -1,4 +1,4 @@
 @extends('layouts2.master')
 @section('content')
-    <h1>one more blog ppost</h1>
+    <h1>One more blog post</h1>
 @endsection

@@ -15,21 +15,24 @@
 
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-    <link href="/css/blog.css" rel="stylesheet">
+    <link href="/public/css/blog.css" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="container">
     @include('layouts2.header')
-
     @include('layouts2.nav')
+
     @include('layouts2.jumbo')
 
-
     <div class="row">
+        <div class="col-md-8 blog-main">
         @yield('content')
+        </div>
+
         @include('layouts2.sidebar')
+
     </div>
     @include('layouts2.footer')
 </div>

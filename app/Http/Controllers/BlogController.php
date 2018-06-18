@@ -15,4 +15,10 @@ class BlogController extends Controller
     {
         return view('blogs.show');
     }
+
+    public function create()
+    {
+        //dd(this);
+        return view('blogs.create');
+    }
 }

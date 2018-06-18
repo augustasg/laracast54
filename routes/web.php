@@ -25,17 +25,21 @@ Route::get('/', function () {
 });
 
 
-
 Route::get('/tasks', 'TasksController@index');
 
 
-
-Route::get('/tasks/{task}','TasksController@show');
+Route::get('/tasks/{task}', 'TasksController@show');
 
 Route::get('/posts', 'PostsController@index');
 Route::get('/posts/{post}', 'PostsController@show');
+
+
+
+
 Route::get('/blogs', 'BlogController@index');
-Route::get('/blogs/{blog}', 'BlogController@show');
+//Route::get('/blogs/{blog}', 'BlogController@show');
+Route::get('/blogs/create', 'BlogController@create');
+
 
 // controller => PostsController
 // Eloquent model => Post
