@@ -39,6 +39,7 @@ Route::get('/posts/{post}', 'PostsController@show');
 Route::get('/blogs', 'BlogController@index');
 //Route::get('/blogs/{blog}', 'BlogController@show');
 Route::get('/blogs/create', 'BlogController@create');
+Route::post('/blogs', 'BlogController@store');
 
 
 // controller => PostsController
