@@ -34,6 +34,8 @@ Route::get('/tasks/{task}','TasksController@show');
 
 Route::get('/posts', 'PostsController@index');
 Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/blogs', 'BlogController@index');
+Route::get('/blogs/{blog}', 'BlogController@show');
 
 // controller => PostsController
 // Eloquent model => Post
