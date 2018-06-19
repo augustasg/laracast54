@@ -26,10 +26,18 @@ class BlogController extends Controller
     {
 
 
+        $this->validate(\request(), [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+
         Post::query()->create([
             'title' => \request('title'),
             'body' => \request('body')
         ]);
+
+
         return redirect('/');
     }
 }
